@@ -3,10 +3,10 @@ import { Carousel } from 'react-bootstrap'
 
 export const Slider = ({itemsSlider}) => {
   return (
-    <Carousel variant='dark' fade>
+    <Carousel>
       {itemsSlider.map((itemSlider, index) => (
         <Carousel.Item key={index} style={{height: '400px'}} interval={4000}>
-          <img className="d-block w-100" style={{width: '100%'}} src={`/images/${itemSlider.urlImage}`} alt={itemSlider.title} />
+          <img className="d-block w-100" style={{width: '100%', opacity: '0.4'}} src={`/images/${itemSlider.urlImage}`} alt={itemSlider.title} />
           <Carousel.Caption>
             <h3>{itemSlider.title}</h3>
             <p>{itemSlider.description}</p>

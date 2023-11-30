@@ -1,5 +1,5 @@
 export const ContactView = () => {
   return (
-    <div>Contacto</div>
+    <section style={{height: '100vh'}}>Contacto</section>
   )
 }

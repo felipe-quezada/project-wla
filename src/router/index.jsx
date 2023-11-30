@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { ServicesView } from '../pages/ServicesView';
 import { AboutView } from '../pages/AboutView';
 import { ContactView } from '../pages/ContactView';
@@ -11,6 +11,7 @@ const router = createBrowserRouter([
 		{ path: '/services', element: <ServicesView /> },
 		{ path: '/about', element: <AboutView /> },
 		{ path: '/contact', element: <ContactView /> },
+		{ path: '*', element: <Navigate to="/" />}
 	]}
 ]);
 

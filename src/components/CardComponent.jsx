@@ -9,20 +9,20 @@ const CardComponent = ({urlImage, title, children}) => {
     <Card className='m-3 text-center' style={{ width: '18rem', marginBlock:'5px' }}>
       <Card.Img variant="top" src={imageSource} />
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
+        {title? <Card.Title>{title}</Card.Title> : null}
         <Card.Text>
           {children}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="warning">Cotiza este servicio</Button>
       </Card.Body>
     </Card>      
   )
 }
 
 CardComponent.propTypes = {
+  children: PropTypes.node.isRequired,
   urlImage: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  title: PropTypes.string,
 }
 
 export default CardComponent
