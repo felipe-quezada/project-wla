@@ -8,7 +8,7 @@ export const Footer = () => {
           <Col>
             <h6>Telefono: +56 9 8244 5598</h6>
           </Col>
-          <Col xs={6} className="text-center">
+          <Col className="text-center">
             <h4>Construcciones Salas Reyes &copy;</h4>
             <p>{new Date().getFullYear()}</p>
           </Col>

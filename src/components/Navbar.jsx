@@ -1,4 +1,4 @@
-import {Container, Nav, Navbar} from 'react-bootstrap';
+import {Col, Container, Nav, Navbar, Row} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '/hammer.svg';
 
@@ -8,8 +8,19 @@ export const NavbarComponent = () => {
     <Navbar expand="lg" style={{backgroundColor: '#e6b300'}}>
       <Container>
         <Navbar.Brand as={Link} to='/'>
-          <img src={logo} alt="logo" width="30" height="30" className="d-inline-block align-top me-3" />
-          Construcciones Salas Reyes
+          <Row>
+            <Col className="d-flex align-items-center">
+              <img src={logo} alt="logo" width="30" height="30" className="d-inline-block align-top me-3" />
+            </Col>
+            <Col>
+              <Col>
+                Construcciones
+              </Col> 
+              <Col>
+                Salas Reyes
+              </Col>
+            </Col>
+          </Row>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

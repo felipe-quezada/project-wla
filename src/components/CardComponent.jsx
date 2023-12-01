@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
 import { Button, Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const CardComponent = ({urlImage, title, children}) => {
 
   const imageSource = `/images/${urlImage}`
+  const requestService = `Quiero cotizar los ${title}`
 
   return (
     <Card className='m-3 text-center' style={{ width: '18rem', marginBlock:'5px' }}>
@@ -13,7 +15,7 @@ const CardComponent = ({urlImage, title, children}) => {
         <Card.Text>
           {children}
         </Card.Text>
-        <Button variant="warning">Cotiza este servicio</Button>
+        <Button as={Link} state={{requestService}} variant="warning" to={'/contact'}>Cotiza este servicio</Button>
       </Card.Body>
     </Card>      
   )
